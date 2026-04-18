@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Faro - Periódico Local</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="notification is-dark is-radiusless is-marginless has-text-centered py-2" style="font-size: 0.9em; z-index: 1030; position: fixed; top: 0; left: 0; width: 100%;">
+        <strong>📈 Indicadores:</strong> <span id="ticker-economia" class="ticker-animacion">Cargando datos económicos...</span>
+    </div>
+
+    <nav class="navbar is-link is-fixed-top" style="top: 36px; z-index: 1020;" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <img src="logo.jpg" alt="Logotipo El Faro" class="logo-faro">
+            </a>
+            <a class="navbar-item title is-4 has-text-white mb-0" href="#">EL FARO</a>
+        </div>
+        <div class="navbar-menu is-active">
+            <div class="navbar-start is-size-6">
+                <a class="navbar-item" href="#inicio">Inicio</a>
+                <a class="navbar-item" href="#multimedia">Multimedia</a>
+                <a class="navbar-item" href="#deporte">Deporte</a>
+                <a class="navbar-item" href="#negocios">Negocios</a>
+                <a class="navbar-item" href="#archivo-pdf">Biblioteca</a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <span id="fecha-hora" class="tag is-dark is-medium">Cargando hora...</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="tabs is-centered is-boxed pt-5">
+        <ul>
+            <li class="is-active"><a href="#nuevo-articulo">Noticias</a></li>
+            <li><a href="#contacto">Contacto Comercial</a></li>
+            <li><a>Más Noticias</a></li>
+        </ul>
+    </div>
+
+    <main class="container px-4 mt-5">
+        
+        <section id="inicio" class="mb-6">
+            <h2 class="title is-3 border-bottom pb-2">
+                Inicio - Noticias Generales 
+                <span class="tag is-info is-rounded ml-3">Total artículos en el sitio: <span class="total-articulos ml-1">0</span></span>
+            </h2>
+            
+            <div id="articulo-destacado" class="mb-6"></div>
+            <div id="articulos-secundarios" class="columns is-multiline"></div>
+        </section>
+
+        <section id="multimedia" class="mb-6">
+            <h2 class="title is-3 border-bottom pb-2">Multimedia</h2>
+            <p class="subtitle is-6 mb-4">Disfruta de nuestra selección de videos y Podcasts.</p>
+            
+            <div class="columns">
+                <div class="column is-7">
+                    <div class="box">
+                        <h3 class="title is-5">El Estrecho de Ormuz: ¿Obra Maestra Oculta?</h3>
+                        <figure class="image is-16by9 mb-4">
+                            <iframe class="has-ratio" src="https://www.youtube.com/embed/Tekj9NuWwxk" frameborder="0" allowfullscreen></iframe>
+                        </figure>
+                        <h3 class="title is-5">Maravillas de la Patagonia | Documental</h3>
+                        <figure class="image is-16by9">
+                            <iframe class="has-ratio" src="https://www.youtube.com/embed/nunVqAJzWbE" frameborder="0" allowfullscreen></iframe>
+                        </figure>
+                    </div>
+                </div>
+                <div class="column is-5">
+                    <div class="box has-background-light">
+                        <h3 class="title is-5">Podcasts del Día</h3>
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/5FujWlqLthRKIXGnRrTflw/video?utm_source=generator" width="100%" height="152" frameBorder="0" loading="lazy" class="mb-2"></iframe>
+                        <p class="is-size-7 has-text-grey mb-4">Líbano teme una nueva ocupación de Israel.</p>
+                        
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/7jJShn0bqkOH2kxx0CUd6C/video?utm_source=generator" width="100%" height="152" frameBorder="0" loading="lazy" class="mb-2"></iframe>
+                        <p class="is-size-7 has-text-grey">¿Intentará Trump tomar Cuba tras atascarse en Irán?.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="deporte" class="mb-6">
+            <h2 class="title is-3 border-bottom pb-2">
+                Deporte 
+                <span class="tag is-info is-rounded ml-3">Total artículos en el sitio: <span class="total-articulos ml-1">0</span></span>
+            </h2>
+            <div class="columns is-multiline">
+                <div class="column is-4">
+                    <article class="card h-100">
+                        <div class="card-content">
+                            <span class="tag is-link is-light mb-2">Fórmula 1</span>
+                            <h4 class="title is-5">Ferrari: el SF-26 era tres décimas más rápido</h4>
+                            <p class="content is-size-6">La última vuelta de Leclerc en clasificación se vio penalizada por la falta de energía en el último tramo de recta.</p>
+                            <a href="https://lat.motorsport.com/f1/news/f1-ferrari-sf-26-tres-decimas-mas-rapido-de-lo-que-se-vio/10809096/" target="_blank" class="has-text-link has-text-weight-bold">Análisis F1 →</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="column is-4">
+                    <article class="card h-100">
+                        <div class="card-content">
+                            <span class="tag is-link is-light mb-2">WSSP</span>
+                            <h4 class="title is-5">ZX Moto y su primera victoria histórica</h4>
+                            <p class="content is-size-6">ZX Moto gana las carreras del WorldSSP en Portimao, la primera victoria para una marca china de motocicletas.</p>
+                            <a href="https://www.roadracingworld.com/news/wssp-chinese-brand-zxmoto-takes-historic-first-victory/" target="_blank" class="has-text-link has-text-weight-bold">WSSP RW →</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="column is-4">
+                    <article class="card h-100">
+                        <div class="card-content">
+                            <span class="tag is-link is-light mb-2">MotoGP</span>
+                            <h4 class="title is-5">Martín vuelve a reinar en un Tissot Sprint</h4>
+                            <p class="content is-size-6">El español bate a 'Pecco' en el último giro y se sitúa líder tras las caídas de Bezzecchi y Marc Márquez.</p>
+                            <a href="https://www.motogp.com/es/news/2026/03/28/martin-steals-stunning-sprint-win-as-drama-takes-the-reins-in-texas/1013853" target="_blank" class="has-text-link has-text-weight-bold">MotoGP →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="negocios" class="mb-6">
+            <h2 class="title is-3 border-bottom pb-2">
+                Negocios 
+                <span class="tag is-info is-rounded ml-3">Total artículos en el sitio: <span class="total-articulos ml-1">0</span></span>
+            </h2>
+            <div class="columns is-multiline">
+                <div class="column is-4">
+                    <article class="card h-100">
+                        <div class="card-content">
+                            <span class="tag is-success is-light mb-2">Economía</span>
+                            <h4 class="title is-5">El 71% de los recortes será en Carabineros</h4>
+                            <p class="content is-size-6">Fue en la Comisión de Seguridad Ciudadana donde se anunciaron los recortes que buscan aplicar.</p>
+                            <a href="https://www.ciperchile.cl/2026/03/26/el-71-de-los-recortes-del-ministerio-de-seguridad-se-concentrara-en-carabineros-51-mil-millones-menos-en-su-presupuesto/" target="_blank" class="has-text-link has-text-weight-bold">Presupuesto | CiperChile →</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="column is-4">
+                    <article class="card h-100">
+                        <div class="card-content">
+                            <span class="tag is-success is-light mb-2">Minería</span>
+                            <h4 class="title is-5">Oportunidad para Chile y Perú con el cobre</h4>
+                            <p class="content is-size-6">La demanda global de cobre coloca a Chile y Perú en el centro de la escena con inversiones millonarias.</p>
+                            <a href="https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/03/28/la-gran-oportunidad-para-chile-y-peru-con-el-cobre-frente-a-la-escasez-global-y-volatilidad-del-dolar.shtml" target="_blank" class="has-text-link has-text-weight-bold">Minería | BiobioChile →</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="column is-4">
+                    <article class="card h-100">
+                        <div class="card-content">
+                            <span class="tag is-success is-light mb-2">Combustibles</span>
+                            <h4 class="title is-5">Medidas para mitigar el alza de combustibles</h4>
+                            <p class="content is-size-6">La iniciativa permite contener el precio del kerosene y apoyar el transporte de las familias.</p>
+                            <a href="https://www.hacienda.cl/noticias-y-eventos/ministerio-de-hacienda-destaca-aprobacion-en-el-congreso-de-medidas-para" target="_blank" class="has-text-link has-text-weight-bold">Combustibles | Min. Hacienda →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="archivo-pdf" class="mb-6">
+            <h2 class="title is-3 border-bottom pb-2">Biblioteca</h2>
+            <p class="subtitle is-6 mb-4"><strong>Archivo "The Original Hacker" (PDF)</strong> - Haz clic para descargar.</p>
+            
+            <div class="columns is-multiline is-mobile">
+                <div class="column is-2-desktop is-4-tablet is-6-mobile">
+                    <a href="TOH01.pdf" class="box is-paddingless has-text-centered is-block pdf-card-hover" target="_blank">
+                        <figure class="image is-3by4"><img src="P01.png" alt="Edición 1"></figure>
+                        <div class="p-2 has-background-light has-text-dark has-text-weight-bold">Edición #1</div>
+                    </a>
+                </div>
+                <div class="column is-2-desktop is-4-tablet is-6-mobile">
+                    <a href="TOH02.pdf" class="box is-paddingless has-text-centered is-block pdf-card-hover" target="_blank">
+                        <figure class="image is-3by4"><img src="P02.png" alt="Edición 2"></figure>
+                        <div class="p-2 has-background-light has-text-dark has-text-weight-bold">Edición #2</div>
+                    </a>
+                </div>
+                <div class="column is-2-desktop is-4-tablet is-6-mobile">
+                    <a href="TOH03.pdf" class="box is-paddingless has-text-centered is-block pdf-card-hover" target="_blank">
+                        <figure class="image is-3by4"><img src="P03.png" alt="Edición 3"></figure>
+                        <div class="p-2 has-background-light has-text-dark has-text-weight-bold">Edición #3</div>
+                    </a>
+                </div>
+                <div class="column is-2-desktop is-4-tablet is-6-mobile">
+                    <a href="TOH04.pdf" class="box is-paddingless has-text-centered is-block pdf-card-hover" target="_blank">
+                        <figure class="image is-3by4"><img src="P04.png" alt="Edición 4"></figure>
+                        <div class="p-2 has-background-light has-text-dark has-text-weight-bold">Edición #4</div>
+                    </a>
+                </div>
+                <div class="column is-2-desktop is-4-tablet is-6-mobile">
+                    <a href="TOH05.pdf" class="box is-paddingless has-text-centered is-block pdf-card-hover" target="_blank">
+                        <figure class="image is-3by4"><img src="p05.png" alt="Edición 5"></figure>
+                        <div class="p-2 has-background-light has-text-dark has-text-weight-bold">Edición #5</div>
+                    </a>
+                </div>
+                <div class="column is-2-desktop is-4-tablet is-6-mobile">
+                    <a href="TOH06.pdf" class="box is-paddingless has-text-centered is-block pdf-card-hover" target="_blank">
+                        <figure class="image is-3by4"><img src="P06.png" alt="Edición 6"></figure>
+                        <div class="p-2 has-background-light has-text-dark has-text-weight-bold">Edición #6</div>
+                    </a>
+                </div>
+                <div class="column is-2-desktop is-4-tablet is-6-mobile">
+                    <a href="TOH07.pdf" class="box is-paddingless has-text-centered is-block pdf-card-hover" target="_blank">
+                        <figure class="image is-3by4"><img src="P07.png" alt="Edición 7"></figure>
+                        <div class="p-2 has-background-light has-text-dark has-text-weight-bold">Edición #7</div>
+                    </a>
+                </div>
+                <div class="column is-2-desktop is-4-tablet is-6-mobile">
+                    <a href="TOH08.pdf" class="box is-paddingless has-text-centered is-block pdf-card-hover" target="_blank">
+                        <figure class="image is-3by4"><img src="P08.png" alt="Edición 8"></figure>
+                        <div class="p-2 has-background-light has-text-dark has-text-weight-bold">Edición #8</div>
+                    </a>
+                </div>
+                <div class="column is-2-desktop is-4-tablet is-6-mobile">
+                    <a href="TOH09.pdf" class="box is-paddingless has-text-centered is-block pdf-card-hover" target="_blank">
+                        <figure class="image is-3by4"><img src="P09.png" alt="Edición 9"></figure>
+                        <div class="p-2 has-background-light has-text-dark has-text-weight-bold">Edición #9</div>
+                    </a>
+                </div>
+                <div class="column is-2-desktop is-4-tablet is-6-mobile">
+                    <a href="TOH10.pdf" class="box is-paddingless has-text-centered is-block pdf-card-hover" target="_blank">
+                        <figure class="image is-3by4"><img src="P10.png" alt="Edición 10"></figure>
+                        <div class="p-2 has-background-light has-text-dark has-text-weight-bold">Edición #10</div>
+                    </a>
+                </div>
+                <div class="column is-2-desktop is-4-tablet is-6-mobile">
+                    <a href="TOH11.pdf" class="box is-paddingless has-text-centered is-block pdf-card-hover" target="_blank">
+                        <figure class="image is-3by4"><img src="P11.png" alt="Edición 11"></figure>
+                        <div class="p-2 has-background-light has-text-dark has-text-weight-bold">Edición #11</div>
+                    </a>
+                </div>
+                <div class="column is-2-desktop is-4-tablet is-6-mobile">
+                    <a href="TOH12.pdf" class="box is-paddingless has-text-centered is-block pdf-card-hover" target="_blank">
+                        <figure class="image is-3by4"><img src="P12.png" alt="Edición 12"></figure>
+                        <div class="p-2 has-background-light has-text-dark has-text-weight-bold">Edición #12</div>
+                    </a>
+                </div>
+                <div class="column is-2-desktop is-4-tablet is-6-mobile">
+                    <a href="TOH13.pdf" class="box is-paddingless has-text-centered is-block pdf-card-hover" target="_blank">
+                        <figure class="image is-3by4"><img src="P13.png" alt="Edición 13"></figure>
+                        <div class="p-2 has-background-light has-text-dark has-text-weight-bold">Edición #13</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="columns mb-6">
+            <div class="column is-6">
+                <section id="nuevo-articulo" class="box">
+                    <h2 class="title is-4">Publicar Nuevo Artículo</h2>
+                    <form id="form-articulo">
+                        <div class="field">
+                            <label class="label">Título del artículo *</label>
+                            <div class="control">
+                                <input class="input" type="text" id="art-titulo" required placeholder="Ej: Nueva plaza inaugurada">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Texto del artículo *</label>
+                            <div class="control">
+                                <textarea class="textarea" id="art-descripcion" rows="3" required placeholder="Escribe el contenido..."></textarea>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column field">
+                                <label class="label">URL del Enlace (Opcional)</label>
+                                <div class="control"><input class="input" type="url" id="art-enlace" placeholder="https://..."></div>
+                            </div>
+                            <div class="column field">
+                                <label class="label">Texto del Enlace (Opcional)</label>
+                                <div class="control"><input class="input" type="text" id="art-texto-enlace" placeholder="Leer más..."></div>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <button type="submit" class="button is-link is-fullwidth has-text-weight-bold">Publicar Artículo</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            
+            <div class="column is-6">
+                <section id="contacto" class="box has-background-light">
+                    <h2 class="title is-4">Contacto Comercial</h2>
+                    <form id="form-contacto">
+                        <div class="columns">
+                            <div class="column field">
+                                <label class="label">Nombre *</label>
+                                <div class="control"><input class="input" type="text" id="contacto-nombre" required></div>
+                            </div>
+                            <div class="column field">
+                                <label class="label">Correo *</label>
+                                <div class="control"><input class="input" type="email" id="contacto-correo" required></div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Mensaje *</label>
+                            <div class="control"><textarea class="textarea" id="contacto-mensaje" rows="4" required></textarea></div>
+                        </div>
+                        <div class="control">
+                            <button type="submit" class="button is-dark is-fullwidth has-text-weight-bold">Enviar Mensaje</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer has-background-dark has-text-light">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-4">
+                    <h4 class="title is-5 has-text-light">Sobre El Faro</h4>
+                    <p class="is-size-7">Tu luz en la información local. Comprometidos con la verdad y la comunidad.</p>
+                </div>
+                <div class="column is-4">
+                    <h4 class="title is-5 has-text-light">Enlaces Útiles</h4>
+                    <ul>
+                        <li><a href="#" class="has-text-grey-light">Términos y Condiciones</a></li>
+                        <li><a href="#" class="has-text-grey-light">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="column is-4">
+                    <h4 class="title is-5 has-text-light">Contacto</h4>
+                    <p class="is-size-7">Email: contacto@elfaro.cl<br>Teléfono: +56 9 1234 5678</p>
+                </div>
+            </div>
+            <div class="content has-text-centered mt-5">
+                <p class="is-size-7">© 2026 Periódico El Faro. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
